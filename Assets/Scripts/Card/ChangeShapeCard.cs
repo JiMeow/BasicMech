@@ -13,13 +13,19 @@ public class ChangeShapeCard : BaseCard
 
     public override void SelectCard()
     {
-        if (shapeIndex == GameController.instance.shapeIndex)
-        {
-            base.SelectCard();
-            return;
-        }
         GameController.instance.ResetSelectShape();
         GameController.instance.shapeIndex = shapeIndex;
         base.SelectCard();
+        GameController.instance.ChangeShape();
+    }
+
+    public override void Init()
+    {
+        GameController.instance.allCardShapes.Add(gameObject);
+    }
+
+    public override void Dispose()
+    {
+        GameController.instance.allCardShapes.Remove(gameObject);
     }
 }

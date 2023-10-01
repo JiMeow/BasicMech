@@ -15,4 +15,17 @@ public class CardLayoutController : MonoBehaviour
     {
         cardLayout.SetActive(!cardLayout.activeSelf);
     }
+
+    public void OnClickClose()
+    {
+        cardLayout.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if (Time.timeScale > 0)
+        {
+            cardLayout.SetActive(false);
+        }
+    }
 }

@@ -12,7 +12,12 @@ public abstract class BaseCard : MonoBehaviour
     private void Start()
     {
         filterImage.gameObject.SetActive(IsSelected);
+        Init();
     }
+
+    public abstract void Init();
+
+    public abstract void Dispose();
 
     public abstract void ActiveCard();
 
@@ -20,5 +25,10 @@ public abstract class BaseCard : MonoBehaviour
     {
         filterImage.gameObject.SetActive(!filterImage.gameObject.activeSelf);
         IsSelected = !IsSelected;
+    }
+
+    private void OnDestroy()
+    {
+        Dispose();
     }
 }

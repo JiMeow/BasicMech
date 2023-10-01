@@ -16,9 +16,6 @@ public class ImageRegonized : MonoBehaviour
 
     public Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
 
-    [SerializeField]
-    private Text text;
-
     private void Awake()
     {
         foreach (var prefab in placeablePrefabs)
@@ -53,7 +50,8 @@ public class ImageRegonized : MonoBehaviour
         }
         foreach (var trackImage in eventArgs.removed)
         {
-            spawnedPrefabs[trackImage.name].SetActive(false);
+            if (spawnedPrefabs.ContainsKey(trackImage.name))
+                spawnedPrefabs[trackImage.name].SetActive(false);
         }
     }
 
