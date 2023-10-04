@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     public float timeScaleSetting;
     public float gravitySetting;
     public float frictionSetting;
+    public float velocitiesSetting;
     public int shapeIndex = 0;
 
     public List<GameObject> allCards;
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour
         timeScaleSetting = 1;
         gravitySetting = 9.8f;
         frictionSetting = 0.01f;
+        velocitiesSetting = 0f;
         foreach (GameObject card in allCards)
         {
             if (card.GetComponent<BaseCard>().IsSelected)
@@ -60,6 +62,13 @@ public class GameController : MonoBehaviour
         physicMaterial.staticFriction = frictionSetting;
         Physics.gravity = new Vector3(0, -gravitySetting, 0);
         OnStartGame?.Invoke();
+
+        GameObject ball = FindAnyObjectByType<Ball>().gameObject;
+        if (ball != null)
+        {
+            Rigidbody rigidbody = ball.GetComponent<Rigidbody>();
+            rigidbody.velocity = new Vector3(velocitiesSetting, 0, 0);
+        }
     }
 
     public void ChangeShape()
