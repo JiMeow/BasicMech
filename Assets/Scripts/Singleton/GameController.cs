@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public float gravitySetting;
     public float frictionSetting;
     public float velocitiesSetting;
+    public float massSetting;
     public int shapeIndex = 0;
 
     public List<GameObject> allCards;
@@ -50,6 +51,7 @@ public class GameController : MonoBehaviour
         gravitySetting = 9.8f;
         frictionSetting = 0.01f;
         velocitiesSetting = 0f;
+        massSetting = 1f;
         foreach (GameObject card in allCards)
         {
             if (card.GetComponent<BaseCard>().IsSelected)
@@ -68,6 +70,7 @@ public class GameController : MonoBehaviour
         {
             Rigidbody rigidbody = ball.GetComponent<Rigidbody>();
             rigidbody.velocity = new Vector3(velocitiesSetting, 0, 0);
+            rigidbody.mass *= massSetting;
         }
     }
 
