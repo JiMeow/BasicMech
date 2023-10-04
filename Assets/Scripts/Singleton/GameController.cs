@@ -12,9 +12,9 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance { get; private set; }
 
-    public float timeScaleSetting = 1f;
-    public float gravitySetting = 9.8f;
-    public float frictionSetting = 0.01f;
+    public float timeScaleSetting;
+    public float gravitySetting;
+    public float frictionSetting;
     public int shapeIndex = 0;
 
     public List<GameObject> allCards;
@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            shapeIndex = 0;
         }
     }
 
@@ -44,6 +45,9 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
+        timeScaleSetting = 1;
+        gravitySetting = 9.8f;
+        frictionSetting = 0.01f;
         foreach (GameObject card in allCards)
         {
             if (card.GetComponent<BaseCard>().IsSelected)
