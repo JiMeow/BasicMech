@@ -8075,6 +8075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardLayout: {fileID: 1971070054}
+  cardAnimator: {fileID: 1971070060}
 --- !u!95 &1058550324
 Animator:
   serializedVersion: 5
