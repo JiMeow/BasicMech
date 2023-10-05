@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using UnityEngine.XR.ARCore;
-using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.Management;
 
 public class GameController : MonoBehaviour

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Stage2 : BaseStage
 {
     protected override void Start()
