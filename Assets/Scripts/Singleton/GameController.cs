@@ -43,11 +43,7 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-        timeScaleSetting = 1;
-        gravitySetting = 9.8f;
-        frictionSetting = 0.01f;
-        velocitiesSetting = 0f;
-        massSetting = 1f;
+        SetStartValue();
         foreach (GameObject card in allCards)
         {
             if (card.GetComponent<BaseCard>().IsSelected)
@@ -81,6 +77,16 @@ public class GameController : MonoBehaviour
             }
         }
         OnChangeShape?.Invoke();
+    }
+
+    public void SetStartValue()
+    {
+        timeScaleSetting = 1;
+        gravitySetting = 9.8f;
+        frictionSetting = 0.01f;
+        velocitiesSetting = 0f;
+        massSetting = 1f;
+        ChangeShape();
     }
 
     public void ResetSelectShape()

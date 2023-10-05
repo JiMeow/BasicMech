@@ -6422,6 +6422,10 @@ MonoBehaviour:
   - {fileID: 6936075188095355277, guid: 7b25752910ae3fe4e90a9cbc29cc0edd, type: 3}
   - {fileID: 2327512897114590391, guid: 1f228f2120c375347857653e1c105122, type: 3}
   - {fileID: 6936075188095355277, guid: 7b25752910ae3fe4e90a9cbc29cc0edd, type: 3}
+  - {fileID: 6936075188095355277, guid: 42d5a2d73f09bbd40bf793e134a4e8e9, type: 3}
+  - {fileID: 6936075188095355277, guid: 121ae23506035c941927b27ebce7b071, type: 3}
+  - {fileID: 6936075188095355277, guid: 293f5cbf548e94f448c973a8b797747e, type: 3}
+  - {fileID: 6936075188095355277, guid: 52c2b417982d0604491cbc6a6b95f1cf, type: 3}
   stageSelected: 0
 --- !u!114 &956284502
 MonoBehaviour:
@@ -12538,7 +12542,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1562165749}
   m_Direction: 2
   m_Value: 0.00000008566338
-  m_Size: 0.46728593
+  m_Size: 0.4671679
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

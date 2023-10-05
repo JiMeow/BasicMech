@@ -10,6 +10,7 @@ public abstract class BaseStage : MonoBehaviour
         GameController.instance.SetTimeScale(0);
         GameController.instance.OnStartGame += Instance_OnStartGame;
         GameController.instance.OnChangeShape += Instance_ChangeShape;
+        GameController.instance.SetStartValue();
     }
 
     private void OnDestroy()

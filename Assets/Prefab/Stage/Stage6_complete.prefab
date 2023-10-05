@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 8850384842669358318}
   - component: {fileID: 1941183432276680907}
   m_Layer: 0
-  m_Name: Stage1
+  m_Name: Stage6_complete
   m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
