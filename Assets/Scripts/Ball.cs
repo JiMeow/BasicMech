@@ -14,9 +14,9 @@ public class Ball : MonoBehaviour
     private void Update()
     {
         if (Result.text != "") return;
-        if (transform.position.y < -10)
+        if (transform.position.y < -5)
         {
-            Result.text = "You Lose";
+            Result.text = "You   Lose";
         }
     }
 }

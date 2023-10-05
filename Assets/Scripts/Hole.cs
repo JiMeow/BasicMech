@@ -22,7 +22,7 @@ public class Hole : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             gameObject.GetComponent<MeshRenderer>().material = _materialActive;
-            Result.text = "You Win";
+            Result.text = "You   Win";
         }
     }
 
@@ -31,7 +31,7 @@ public class Hole : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             gameObject.GetComponent<MeshRenderer>().material = _materialActive;
-            Result.text = "You Win";
+            Result.text = "You   Win";
         }
     }
 
@@ -40,7 +40,7 @@ public class Hole : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             gameObject.GetComponent<MeshRenderer>().material = _materialActive;
-            Result.text = "You Win";
+            Result.text = "You   Win";
         }
     }
 }
