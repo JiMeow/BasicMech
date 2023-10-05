@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         Result = GameObject.Find("Result").GetComponent<Text>();
+        Result.text = "";
     }
 
     private void Update()
