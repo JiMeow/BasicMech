@@ -55,6 +55,12 @@ public class ImageRegonized : MonoBehaviour
 
     private void UpdateImage(ARTrackedImage trackedImage)
     {
+        foreach (var keyValue in spawnedPrefabs)
+        {
+            GameObject thisPrefab = keyValue.Value.gameObject;
+            if (thisPrefab.activeSelf) return;
+        }
+
         string name = trackedImage.referenceImage.name;
         var prefab = spawnedPrefabs[name];
         prefab.SetActive(true);
